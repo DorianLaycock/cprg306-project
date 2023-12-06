@@ -1,7 +1,17 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <main>
-      <p>This is my page. It will contain my project which will integrate a movie database API and will contain features related to that.</p>
+    <main class="flex justify-center items-center w-screen">
+      <div class="text-center">
+        <h1 class="text-4xl">FilmJS</h1>
+        <p>Welcome to FilmJS, a website dedicated to creating lists and cataloging your favorite films.</p>
+        <div class="pt-5">
+          <Link class="block" href = "/films">Films</Link>
+          <Link class="block" href = "/about">About</Link>
+          <Link class="block" href = "/placeholder">Placeholder</Link>
+        </div>
+      </div>
     </main>
   )
 }
