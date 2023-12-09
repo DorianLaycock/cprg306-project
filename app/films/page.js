@@ -24,10 +24,10 @@ const moviesData = [
 
 export default function Page() {
 
-  /*const [items, setMovies] = useState(moviesData);
+  const [movies, setMovies] = useState(moviesData);
   const [recipe, setMovie] = useState([]);
 
-  async function loadMovies(){
+  /*async function loadMovies(){
     const movies = await fetchMovie();
     set(movies);
   }
