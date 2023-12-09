@@ -12,7 +12,7 @@ const moviesData = [
   {name:"Oldboy", year:"2003", category:"action/thriller"},
 ];
 
-async function fetchMovie(){
+/*async function fetchMovie(){
   try {
     response = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?i=${recipe}");
     const data = await response.json();
@@ -20,11 +20,11 @@ async function fetchMovie(){
   } catch (error){
     console.error(error);
   }
-}
+}*/
 
 export default function Page() {
 
-  const [items, setMovies] = useState(moviesData);
+  /*const [items, setMovies] = useState(moviesData);
   const [recipe, setMovie] = useState([]);
 
   async function loadMovies(){
@@ -34,14 +34,14 @@ export default function Page() {
 
   useEffect(() => {
     loadMovies();
-  }, []);
+  }, []);*/
 
   function handleSubmit(movie){
-    setItems([...movies, movie]);
+    setMovies([...movies, movie]);
   }
 
   function handleDelete(name){
-    setItems(items.filter((movie) => movie.name !== name));
+    setMovies(movies.filter((movie) => movie.name !== name));
   } 
 
   return (
@@ -52,7 +52,7 @@ export default function Page() {
     </div>
     <div className="flex flex-row border border-white">
       <div className="flex basis-1/3 w-150">
-        <Movieform onSubmit ={(item) => handleSubmit(item)} />
+        <Movieform onSubmit ={(movie) => handleSubmit(movie)} />
       </div>
       <div className="flex basis-1/3 justify-center border border-white"> 
       <p>

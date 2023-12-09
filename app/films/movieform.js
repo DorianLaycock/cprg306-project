@@ -9,8 +9,8 @@ export default function Movieform({onSubmit}) {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const item = {name, category};
-        onSubmit(item);
+        const movie = {name, category};
+        onSubmit(movie);
 
         setName("");
         setCategory("");
