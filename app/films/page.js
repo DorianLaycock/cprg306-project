@@ -1,3 +1,7 @@
+//Attempted API integration has been commented out, as it was not working properly. You can still add films to the list
+//and delete them, but the API integration is not working. I fully intend to fix this later as this project will still be 
+//good practice for the future.
+
 "use client";
 
 import Link from "next/link";
@@ -12,29 +16,30 @@ const moviesData = [
   {name:"Oldboy", year:"2003", category:"action/thriller"},
 ];
 
-/*async function fetchMovie(){
+{/*async function fetchMovie(){
   try {
-    response = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?i=${recipe}");
+    response = await fetch("https://search.imdbot.workers.dev/?q=Niram");
     const data = await response.json();
     return data.message;
   } catch (error){
     console.error(error);
   }
-}*/
+}*/}
 
 export default function Page() {
 
   const [movies, setMovies] = useState(moviesData);
-  const [recipe, setMovie] = useState([]);
 
-  /*async function loadMovies(){
+  {/*const [movie, setMovie] = useState([]);
+
+  async function loadMovies(){
     const movies = await fetchMovie();
     set(movies);
   }
 
   useEffect(() => {
     loadMovies();
-  }, []);*/
+  }, []);*/}
 
   function handleSubmit(movie){
     setMovies([...movies, movie]);
@@ -50,19 +55,16 @@ export default function Page() {
       <h1 className="text-4xl">Film search</h1>
       <Link class = "block" href="/">Homepage</Link>
     </div>
-    <div className="flex flex-row border border-white">
+    <div className="flex flex-row">
       <div className="flex basis-1/3 w-150">
         <Movieform onSubmit ={(movie) => handleSubmit(movie)} />
       </div>
       <div className="flex basis-1/3 justify-center border border-white"> 
-      <p>
-        Placeholder for movie
-      </p>
-        {/* <select name = "movies">
+      {/*<select name = "movies">
           {Object.keys(movies).map((movie) => (
             <option key={movie}>{movie}</option>
             ))}
-        </select> */}
+        </select>*/}
       </div>
     </div>
     <div>
